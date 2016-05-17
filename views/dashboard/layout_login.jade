@@ -1,0 +1,15 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+		link(rel='stylesheet', href='/stylesheets/dashboard_style.css')
+		link(rel='stylesheet', href='/stylesheets/main.css')
+		script(src='/javascript/bootstrap.min.js')
+	body
+		nav.navbar.navbar-default.navbar-static-top.navbar-inverse(role='navigation' style='position: fixed;top: 0px;width: 100%;')
+			.container-fluid
+				.navbar-header
+					.navbar-brand Tracko dashboard
+		block content
+

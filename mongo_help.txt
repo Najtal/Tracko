@@ -1,0 +1,4 @@
+
+
+go to mongo bin repo and enter the following command
+> mongod --dbpath c:\Users\jvdur\Dev\tracko\tracko\data --storageEngine=mmapv1 --journal

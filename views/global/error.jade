@@ -1,0 +1,9 @@
+extends errorlayout
+
+block content
+  h1 Error !
+  hr
+  p= message
+  hr
+  h2= error.status
+  pre #{error.stack}

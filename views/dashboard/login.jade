@@ -1,0 +1,41 @@
+extends layout_login
+
+block content
+    container.col-md-12
+        br
+        br
+        div.col-lg-4.col-lg-offset-2(style="margin-top:80px")
+            img(src="/images/tracko_logo_1100x400.png", width="100%")
+            br
+            br
+            p The TRACKO geolocation system has a dashboard that allow you to follow any move and activity of your tracker.
+            br
+            p
+
+        div.col-lg-3.col-lg-offset-1(style="margin-top:80px")
+
+            h2 Login
+            if (msg != undefined)
+                .alert.alert-warning(role="alert") #{msg}
+
+            form(name="login", method="post", action="/login/")
+                #e1
+                    p Email address
+                        div.input-lg-12
+                            input(type="text", name="email", placeholder="email").form-control
+                br
+                #e2
+                    p Password
+                        div.input-lg-12
+                            input(type="password", name="password", placeholder="Password").form-control
+
+                br
+                div.actions
+                    input(type="submit", value="Connexion").btn.btn-success
+
+                br
+                #e3
+                    a(href='/dashboard/register') Create an account
+                    &nbsp;&nbsp;-&nbsp;&nbsp;
+                    a(href='/dashboard/forgotten') Password forgotten
+
