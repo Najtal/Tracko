@@ -49,11 +49,9 @@ app.use(function(req,res,next){
 // ---------------------------------------------------------
 require('./routes/routes')(app);
 
-
 // OUTPUT
 console.log('Server listening on port 3000');
 console.log('Server running in env-mode: ' + app.get('env'));
-
 
 
 // ---------------------------------------------------------

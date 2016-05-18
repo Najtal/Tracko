@@ -5,9 +5,9 @@ block content
         br
         br
 
-        div.col-lg-8.col-lg-offset-2(style="margin-top:80px")
+        div.col-lg-8.col-lg-offset-2(style="margin-top:20px")
 
-            h2 Register new account to tracko
+            h2 Sign up at tracko
             br
             if (msg != undefined)
                 .alert.alert-warning(role="alert") #{msg}
@@ -15,7 +15,7 @@ block content
 
             form(name="login", method="post", action="/login/")
 
-                div.col-lg-6
+                div.col-lg-7
                     #e1
                         p Personal information *
                             div.input-md-12
@@ -32,7 +32,7 @@ block content
                     br
                     #e3
                         p Company
-                            div.input-lg-12
+                            div.input-lg-121
                                 input(type="text", name="company", placeholder="Company").form-control
                     br
                     #e4
@@ -43,7 +43,7 @@ block content
 
 
 
-                div.col-lg-5.col-lg-offset-1
+                div.col-lg-5
                     #e5
                         p Login information *
                             div.input-lg-12
@@ -68,7 +68,7 @@ block content
 
                     br
                     #e3
-                        a(href='dashboard/login') I have an account
+                        a(href='/dashboard/login') I have an account
                         br
                         a(href='/') Back to home page
 

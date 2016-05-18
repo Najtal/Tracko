@@ -1,7 +1,339 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-
-  a(href='dashboard/login') Login
+  body
+    // Loader
+    .loader
+      .loader-img
+    // Top menu
+    nav.navbar.navbar-inverse.navbar-fixed-top.navbar-no-bg(role='navigation')
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#top-navbar-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='index.html') Tracko
+        // Collect the nav links, forms, and other content for toggling
+        #top-navbar-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a.scroll-link(href='#top-content') Top
+            li
+              a.scroll-link(href='#features') Features
+            li
+              a.scroll-link(href='#how-it-works') How it works
+            li
+              a.scroll-link(href='#testimonials') Testimonials
+            li
+              a.scroll-link(href='#about-us') About
+    // Top content
+    .top-content
+      .inner-bg
+        .container
+          .row
+            .col-sm-8.col-sm-offset-2.text
+              h1.wow.fadeInLeftBig
+                | Free your rides with
+                strong  Tracko
+              .description.wow.fadeInLeftBig
+                p
+                  | Tracko make your bike rides safe and help you follow all your performances.
+              .top-big-link.wow.fadeInUp
+                a.btn.btn-link-1(href='/dashboard/register') Sign up now
+                a.btn.btn-link-2.scroll-link(href='#features') Learn more
+    // Features
+    .features-container.section-container
+      .container
+        .row
+          .col-sm-12.features.section-description.wow.fadeIn
+            h2
+              strong Best
+              |  features
+            .divider-1.wow.fadeInUp
+              span
+        .row
+          .col-sm-4.features-box.wow.fadeInDown
+            .features-box-icon
+              i.fa.fa-thumbs-o-up
+            h3 Do not worry anymore
+            p
+              | Do not worry anymore that your bike got stolen, Tracko let you track your bike and makes it safe everywhere. Get notified instantly if it gets shaken.
+          .col-sm-4.features-box.wow.fadeInUp
+            .features-box-icon
+              i.fa.fa-magic
+            h3 Easy To Use
+            p
+              | Tracko is a device that easilly fixes on you bike. There is no charging, no maintenance. Let it merge with your bike!
+          .col-sm-4.features-box.wow.fadeInDown
+            .features-box-icon
+              i.fa.fa-cog
+            h3 Secure
+            p Our tracker has been designed to be your fear locker in any condition.
+        .row
+          .col-sm-12.section-bottom-button.wow.fadeInUp
+            a.btn.btn-link-1.scroll-link(href='#more-features') Learn more
+    // More features
+    .more-features-container.section-container.section-container-gray-bg
+      .container
+        .row
+          .col-sm-12.more-features.section-description.wow.fadeIn
+            h2
+              strong More
+              |  features
+            .divider-1.wow.fadeInUp
+              span
+        .row
+          .col-sm-5.more-features-box.wow.fadeInLeft
+            img(src='/web/img/devices/iphone.png', alt='')
+          .col-sm-7.more-features-box.wow.fadeInUp
+            .more-features-box-text
+              .more-features-box-text-icon
+                i.fa.fa-paperclip
+              h3 Ut wisi enim ad minim
+              .more-features-box-text-description
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+                | Ut wisi enim ad minim veniam, quis nostrud.
+            .more-features-box-text
+              .more-features-box-text-icon
+                i.fa.fa-user
+              h3 Quis nostrud exerci tat
+              .more-features-box-text-description
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+                | Ut wisi enim ad minim veniam, quis nostrud.
+            .more-features-box-text
+              .more-features-box-text-icon
+                i.fa.fa-pencil
+              h3 Sed do eiusmod tempor
+              .more-features-box-text-description
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+                | Ut wisi enim ad minim veniam, quis nostrud.
+            .more-features-box-text
+              .more-features-box-text-icon
+                i.fa.fa-twitter
+              h3 Minim veniam quis nostrud
+              .more-features-box-text-description
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+                | Ut wisi enim ad minim veniam, quis nostrud.
+    // Great support
+    .great-support-container.section-container
+      .container
+        .row
+          .col-sm-12.great-support.section-description.wow.fadeIn
+            h2
+              strong Great
+              |  support
+            .divider-1.wow.fadeInUp
+              span
+        .row
+          .col-sm-7.great-support-box.wow.fadeInLeft
+            .great-support-box-text.great-support-box-text-left
+              h3 Ut wisi enim ad minim
+              p.medium-paragraph
+                | Lorem ipsum dolor sit amet,
+                span.colored-text consectetur adipisicing
+                |  elit,
+                | 	                    		sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+                | Ut wisi enim ad minim veniam, quis nostrud.
+                | Exerci tation ullamcorper suscipit
+                span.colored-text lobortis nisl
+                |  ut aliquip ex ea commodo consequat.
+                | 	                    		Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl.
+          .col-sm-5.great-support-box.wow.fadeInUp
+            img(src='/web/img/devices/pc.png', alt='')
+    // How it works
+    .how-it-works-container.section-container.section-container-image-bg
+      .container
+        .row
+          .col-sm-12.how-it-works.section-description.wow.fadeIn
+            h2
+              strong How
+              |  it works
+            .divider-1.wow.fadeInUp
+              span
+        .row
+          .col-sm-4.col-sm-offset-1.how-it-works-box.wow.fadeInUp
+            .how-it-works-box-icon 1
+            h3 Sign up
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+          .col-sm-4.col-sm-offset-2.how-it-works-box.wow.fadeInDown
+            .how-it-works-box-icon 2
+            h3 Make payment
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+        .row
+          .col-sm-4.col-sm-offset-1.how-it-works-box.wow.fadeInUp
+            .how-it-works-box-icon 3
+            h3 Log in
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+          .col-sm-4.col-sm-offset-2.how-it-works-box.wow.fadeInDown
+            .how-it-works-box-icon 4
+            h3 Start learning
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+        .row
+          .col-sm-12.section-bottom-button.wow.fadeInUp
+            a.btn.btn-link-1.scroll-link(href='#top-content') Sign up now
+    // Testimonials
+    .testimonials-container.section-container
+      .container
+        .row
+          .col-sm-12.testimonials.section-description.wow.fadeIn
+            h2
+              strong Our
+              |  clients
+            .divider-1.wow.fadeInUp
+              span
+        .row
+          .col-sm-10.col-sm-offset-1.testimonial-list.wow.fadeInUp
+            div(role='tabpanel')
+              // Tab panes
+              .tab-content
+                #tab1.tab-pane.fade.in.active(role='tabpanel')
+                  .testimonial-image
+                    img(src='/web/img/testimonials/1.jpg', alt='', data-at2x='/web/img/testimonials/1.jpg')
+                  .testimonial-text
+                    p
+                      | "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+                      | Lorem ipsum dolor sit amet, consectetur..."
+                      br
+                      a(href='#') Lorem Ipsum, dolor.co.uk
+                #tab2.tab-pane.fade(role='tabpanel')
+                  .testimonial-image
+                    img(src='/web/img/testimonials/2.jpg', alt='', data-at2x='/web/img/testimonials/2.jpg')
+                  .testimonial-text
+                    p
+                      | "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
+                      | ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+                      | lobortis nisl ut aliquip ex ea commodo consequat..."
+                      br
+                      a(href='#') Minim Veniam, nostrud.com
+                #tab3.tab-pane.fade(role='tabpanel')
+                  .testimonial-image
+                    img(src='/web/img/testimonials/3.jpg', alt='', data-at2x='/web/img/testimonials/3.jpg')
+                  .testimonial-text
+                    p
+                      | "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+                      | Lorem ipsum dolor sit amet, consectetur..."
+                      br
+                      a(href='#') Lorem Ipsum, dolor.co.uk
+                #tab4.tab-pane.fade(role='tabpanel')
+                  .testimonial-image
+                    img(src='/web/img/testimonials/4.jpg', alt='', data-at2x='/web/img/testimonials/4.jpg')
+                  .testimonial-text
+                    p
+                      | "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
+                      | ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+                      | lobortis nisl ut aliquip ex ea commodo consequat..."
+                      br
+                      a(href='#') Minim Veniam, nostrud.com
+              // Nav tabs
+              ul.nav.nav-tabs(role='tablist')
+                li.active(role='presentation')
+                  a(href='#tab1', aria-controls='tab1', role='tab', data-toggle='tab')
+                li(role='presentation')
+                  a(href='#tab2', aria-controls='tab2', role='tab', data-toggle='tab')
+                li(role='presentation')
+                  a(href='#tab3', aria-controls='tab3', role='tab', data-toggle='tab')
+                li(role='presentation')
+                  a(href='#tab4', aria-controls='tab4', role='tab', data-toggle='tab')
+    // Call to action
+    .call-to-action-container.section-container.section-container-image-bg
+      .container
+        .row
+          .col-sm-12.call-to-action.section-description.wow.fadeInLeftBig
+            h2
+              strong Call
+              |  to action
+            .divider-1.wow.fadeInUp
+              span
+            p
+              | Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+              | aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud.
+        .row
+          .col-sm-12.section-bottom-button.wow.fadeInUp
+            a.btn.btn-link-1.scroll-link(href='#top-content') Sign up now
+    // About us
+    .about-us-container.section-container
+      .container
+        .row
+          .col-sm-12.about-us.section-description.wow.fadeIn
+            h2
+              strong About
+              |  us
+            .divider-1.wow.fadeInUp
+              span
+        .row
+          .col-sm-4.about-us-box.wow.fadeInUp
+            .about-us-photo
+              img(src='/web/img/about/1.jpg', alt='', data-at2x='/web/img/about/1.jpg')
+            h3 Jim Black
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+            .about-us-social
+              a(href='#')
+                i.fa.fa-facebook
+              a(href='#')
+                i.fa.fa-dribbble
+              a(href='#')
+                i.fa.fa-twitter
+          .col-sm-4.about-us-box.wow.fadeInDown
+            .about-us-photo
+              img(src='/web/img/about/2.jpg', alt='', data-at2x='/web/img/about/2.jpg')
+            h3 Tom Brown
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+            .about-us-social
+              a(href='#')
+                i.fa.fa-facebook
+              a(href='#')
+                i.fa.fa-dribbble
+              a(href='#')
+                i.fa.fa-twitter
+          .col-sm-4.about-us-box.wow.fadeInUp
+            .about-us-photo
+              img(src='/web/img/about/3.jpg', alt='', data-at2x='/web/img/about/3.jpg')
+            h3 Sarah Green
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+            .about-us-social
+              a(href='#')
+                i.fa.fa-facebook
+              a(href='#')
+                i.fa.fa-dribbble
+              a(href='#')
+                i.fa.fa-twitter
+    // Footer
+    footer
+      .container
+        .row
+          .col-sm-12.footer-social
+            a(href='#')
+              i.fa.fa-facebook
+            a(href='#')
+              i.fa.fa-dribbble
+            a(href='#')
+              i.fa.fa-twitter
+            a(href='#')
+              i.fa.fa-instagram
+            a(href='#')
+              i.fa.fa-pinterest
+        .row
+          .col-sm-12.footer-copyright
+            | © Jedy Bootstrap Template by
+            a(href='http://azmind.com') Azmind
+            | .
+    // Javascript
+    script(src='/web/js/jquery-1.11.1.min.js')
+    script(src='/web/bootstrap/js/bootstrap.min.js')
+    script(src='/web/js/jquery.backstretch.min.js')
+    script(src='/web/js/wow.min.js')
+    script(src='/web/js/retina-1.1.0.min.js')
+    script(src='/web/js/waypoints.min.js')
+    script(src='/web/js/scripts.js')
+    //if lt IE 10
+      script(src='/web/js/placeholder.js')
